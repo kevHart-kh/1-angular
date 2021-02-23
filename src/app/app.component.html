@@ -1,4 +1,13 @@
 <hello name="{{ name }}"></hello>
-<p>
-  Start editing to see some magic happen :)
-</p>
+<h1>giliran user {{giliran}}</h1>
+
+<div>Baris</div>
+<input type="number" [(ngModel)]="baris" max="4" min="0" />
+<br /><br />
+<div>kolom</div>
+<input type="number" [(ngModel)]="kolom" max="4" min="0" /><br />
+<button (click)="submit()">submit</button>
+
+<div *ngFor="let boardBaris of board" class="output">
+  <span *ngFor="let boardKolom of boardBaris"> {{boardKolom}}</span>
+</div>
